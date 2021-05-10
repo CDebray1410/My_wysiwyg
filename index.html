@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="author" content="Christopher Debray, Floran Lebreton">
+        <meta name="description" content="My Wysiwyg">
+        <meta name="keywords" content="Wysiwyg">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="./main.css">
+        <title>My Wysiwyg</title>
+    </head>
+    <body>
+        <main>
+            <h1 class="title">My Wysiwyg</h1>
+            <div id="wysiwyg">
+                <textarea>
+                </textarea>
+                <div contenteditable=true name="text_box" id="text_box" class="text_box">
+                </div>
+            </div>
+        </main>
+
+        <script type="text/javascript" src="jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="my_wysiwyg.js"></script>
+        <script type="text/javascript">
+            $('textarea').my_wysiwyg(
+                {
+                    buttons: ["bold", "line-through", "italic", "font-size", "strikeThrough", "color"]
+                }
+            );
+        </script>
+    </body>
+</html>
